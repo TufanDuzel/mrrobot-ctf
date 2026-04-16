@@ -1,4 +1,4 @@
-Phase 1: Reconnaissance & Advanced Enumeration
+# Phase 1: Reconnaissance & Advanced Enumeration
 Objective
 The goal of this phase was to identify the target's attack surface, discover open services, and perform deep web enumeration to find hidden entry points.
 
@@ -36,7 +36,7 @@ The reconnaissance phase successfully identified the target as a WordPress-based
 
 
 
-Phase 2: Initial Access & Web Exploitation
+# Phase 2: Initial Access & Web Exploitation
 Objective
 The primary focus of this phase was to exploit the information gathered during enumeration to gain initial access to the system. This involved discovering sensitive files, performing user enumeration, and launching a brute-force attack against the CMS.
 
@@ -81,7 +81,7 @@ Success: By matching the valid user with the correct entry from the fsocity dict
 
 
 
-Phase 3: Exploitation & Initial Access (Reverse Shell)
+# Phase 3: Exploitation & Initial Access (Reverse Shell)
 Objective
 The objective of this phase was to transition from web-based administrative access to a direct command-line interface (CLI) on the target's operating system. This is achieved by injecting a malicious payload into the CMS theme files.
 
@@ -131,7 +131,7 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 
 
 
-Phase 4: Horizontal Privilege Escalation & TTY Shell
+# Phase 4: Horizontal Privilege Escalation & TTY Shell
 Objective
 The goal of this phase was to elevate privileges from a low-level service account (daemon) to a more privileged user (robot) by discovering credentials and stabilizing the shell.
 
@@ -169,7 +169,7 @@ Result: Successfully escalated privileges from daemon to robot. I can now access
 
 
 
-Phase 5: Vertical Privilege Escalation (Root Access)
+# Phase 5: Vertical Privilege Escalation (Root Access)
 Objective
 The final objective was to escalate privileges from the robot user to the root user to gain full control over the target system and retrieve the final flag.
 
